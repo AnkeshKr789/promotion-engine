@@ -54,4 +54,11 @@ public class PromotionEngineServiceTest {
         int total = promotionEngineService.calculateTotal(request);
         assertEquals(280, total);
     }
+
+    @Test
+    void testEmptyCart() {
+        CartRequest request = new CartRequest(List.of());
+        int total = promotionEngineService.calculateTotal(request);
+        assertEquals(0, total);
+    }
 }
