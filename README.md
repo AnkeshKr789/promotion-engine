@@ -66,7 +66,6 @@ promotion-engine/
 
 ```bash
 git clone https://github.com/AnkeshKr789/promotion-engine.git
-cd promotion-engine
 ```
 
 ### 🔧 2. Build & Run with Maven
