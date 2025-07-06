@@ -41,7 +41,6 @@ public class PromotionEngineService {
     return total;
 }
 
-
     private List<CartItem> deepCopy(List<CartItem> original) {
         List<CartItem> copy = new ArrayList<>();
         for (CartItem item : original) {
