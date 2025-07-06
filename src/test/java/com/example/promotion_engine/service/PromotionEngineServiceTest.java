@@ -68,4 +68,12 @@ public class PromotionEngineServiceTest {
         int total = promotionEngineService.calculateTotal(request);
         assertEquals(0, total);
     }
+
+    @Test
+    void testUnknownSKU() {
+        CartRequest request = new CartRequest(List.of(
+                new CartItem("Z", 3)));
+        int total = promotionEngineService.calculateTotal(request);
+        assertEquals(0, total); 
+    }
 }
