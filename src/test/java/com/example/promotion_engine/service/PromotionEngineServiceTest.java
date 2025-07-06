@@ -43,4 +43,15 @@ public class PromotionEngineServiceTest {
         int total = promotionEngineService.calculateTotal(request);
         assertEquals(370, total);
     }
+
+    @Test
+    void testScenarioC() {
+        CartRequest request = new CartRequest(List.of(
+                new CartItem("A", 3),
+                new CartItem("B", 5),
+                new CartItem("C", 1),
+                new CartItem("D", 1)));
+        int total = promotionEngineService.calculateTotal(request);
+        assertEquals(280, total);
+    }
 }
